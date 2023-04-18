@@ -35,7 +35,7 @@ As it turns out, this is a Book Cipher. The numbers correspond to line-word-lett
 
 ## Step 3
 
-We can now revisit the "beausFortressOfPwnitude.txt" file since we have a key for the cipher. Using the Beaufort Cipher with keyword "enigma" on the file contents after pulling them out of the disk image unencrypts the password dictionary. I should note that dcode.fr seemed to have some issues where the cipher got more out of sync as time went on, but luckily the correct password was salvaged.
+We can now revisit the "beausFortressOfPwnitude.txt" file since we have a key for the cipher. Using the Beaufort Cipher with keyword "enigma" on the file contents after pulling them out of the disk image unencrypts the password dictionary. I should note that we had some issues deciphering all of the passwords in one go, but doing it in 2-3 sections worked out perfectly.
 
 At this point, I sent the "keepsecure.kdb" file and the unencrypted password dictionary over to Kali Linux to give it to John the Ripper. The password hash can be extracted from keepsecure.kdb using the command `keepass2john keepsecure.kdb > temphash.txt`. Using nano or vi, remove the "keepsecure.kdb:" section of the extracted hash, and then run `john temphash.txt beausFortressOfPwnitude.txt` and it solved it in less than a second with the password of "TimeWaits4No1".
 
@@ -43,7 +43,9 @@ At this point, I sent the "keepsecure.kdb" file and the unencrypted password dic
 
 With our password in hand, we can now open up the KeePass database. There's a ton of funny stuff in here including references to Twitter going down the drain because of Elon Musk and a link to ChatGPT labeled as "for homework", but what we're actually looking for is an audio file called "robotjams.wav". This can be found in either the backup section of the database or in the email section, I definitely noticed at least 3 copies of it without even browsing around every entry.
 
-When opening up "robotjams.wav" in a spectrogram using Audacity, this is what it shows. ![](theaudacityofthischallenge.png)
+We then opened up this "robotjams.wav" file in Audacity and saw nothing... at first. After clicking the dropdown on the name of the file and switching it to spectrogram mode, this is what we saw. ![](theaudacityofthischallenge.png)
+
+While this is readable as is, it's worth noting that the dropdown you just used also has a "Spectrogram Settings" tab and changing the scale can help with the readability of the text.
 
 ## Step 5
 
