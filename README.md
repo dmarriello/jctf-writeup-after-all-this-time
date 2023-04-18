@@ -27,4 +27,10 @@ Just before we tackle that puzzle, it's worth noting that in [root]/Users/User/D
 
 ## Step 2
 
-Upon looking at the PDF, two major things of note jump out. The second page has a note on it and some numbers, which I will attach an image of, and the final page has some highlighting via an comment shown by Adobe.
+Upon looking at the PDF, two major things of note jump out. The second page has a note on it and some numbers and the final page has some highlighting via an comment shown by Adobe. Images of both of these are below. ![](notepage2.png) ![](epiloguee.png)
+
+As it turns out, this is a Book Cipher. The numbers correspond to line-word-letter in that order. The note references the final page being the key, so trying out the cipher there gives us the word of "enigma".
+
+## Step 3
+
+
