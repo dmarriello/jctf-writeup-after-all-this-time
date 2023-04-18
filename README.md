@@ -31,7 +31,7 @@ Also, in the Desktop again, there's a KeePass database file called "keepsecure.k
 
 Upon looking at the PDF, two major things of note jump out. The second page has a note on it and some numbers and the final page has some highlighting via an comment shown by Adobe. Images of both of these are below. ![](notepage2.png) ![](epiloguee.png)
 
-As it turns out, this is a Book Cipher. The numbers correspond to line-word-letter in that order. The note references the final page being the key, so trying out the cipher there gives us the word of "enigma".
+As it turns out, this is a Book Cipher. The numbers correspond to line-word-letter in that order. The note references the final page being the key where the first "e" (1-1-3) is already highlighted for us. Trying out the cipher there gives us the word of "enigma".
 
 ## Step 3
 
